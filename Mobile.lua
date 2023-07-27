@@ -2,7 +2,6 @@
 
 Rayfield Interface Suite
 by Sirius
-
 shlex | Designing + Programming
 iRay  | Programming
 Xenjio | Removed automatic config saving :skull:
@@ -783,7 +782,7 @@ function Maximise()
 	TweenService:Create(Topbar.CornerRepair, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {BackgroundTransparency = 0}):Play()
 	TweenService:Create(Topbar.Divider, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {BackgroundTransparency = 0}):Play()
 	TweenService:Create(Main, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Size =  UDim2.new(0, 375, 0, 375)}):Play()
-	TweenService:Create(Topbar, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 500, 0, 45)}):Play()
+	TweenService:Create(Topbar, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 375, 0, 45)}):Play()
 	TabList.Visible = true
 	wait(0.2)
 
