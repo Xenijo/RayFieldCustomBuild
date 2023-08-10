@@ -2367,7 +2367,10 @@ function DropdownSettings:Replace(NewOption)
 					TweenService:Create(Toggle, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
 				end
-				SaveConfiguration()
+				 if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 			end
 
 			if Settings.ConfigurationSaving then
