@@ -1693,7 +1693,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 				if InputSettings.RemoveTextAfterFocusLost then
 					Input.InputFrame.InputBox.Text = ""
 				end
-				SaveConfiguration()
+				  if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 			end)
 
 			Input.MouseEnter:Connect(function()
