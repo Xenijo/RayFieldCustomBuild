@@ -2150,7 +2150,10 @@ function DropdownSettings:Replace(NewOption)
 				CheckingForKey = false
 				if Keybind.KeybindFrame.KeybindBox.Text == nil or "" then
 					Keybind.KeybindFrame.KeybindBox.Text = KeybindSettings.CurrentKeybind
-					SaveConfiguration()
+					if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 				end
 			end)
 
@@ -2222,7 +2225,10 @@ function DropdownSettings:Replace(NewOption)
 				Keybind.KeybindFrame.KeybindBox.Text = tostring(NewKeybind)
 				KeybindSettings.CurrentKeybind = tostring(NewKeybind)
 				Keybind.KeybindFrame.KeybindBox:ReleaseFocus()
-				SaveConfiguration()
+				if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 			end
 			if Settings.ConfigurationSaving then
 				if Settings.ConfigurationSaving.Enabled and KeybindSettings.Flag then
@@ -2321,7 +2327,10 @@ function DropdownSettings:Replace(NewOption)
 				end
 
 
-				SaveConfiguration()
+				if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 			end)
 
 			function ToggleSettings:Set(NewToggleValue)
@@ -2487,7 +2496,10 @@ function DropdownSettings:Replace(NewOption)
 							end
 
 							SliderSettings.CurrentValue = NewValue
-							SaveConfiguration()
+							if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 						end
 					else
 						TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X > 5 and Location - Slider.Main.AbsolutePosition.X or 5, 1, 0)}):Play()
@@ -2513,7 +2525,10 @@ function DropdownSettings:Replace(NewOption)
 					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
 				end
 				SliderSettings.CurrentValue = NewVal
-				SaveConfiguration()
+				if SaveDropDown then 
+					RayfieldLibrary:SaveConfiguration()
+                    RayfieldLibrary:SaveConfigurationName()
+                    end
 			end
 			if Settings.ConfigurationSaving then
 				if Settings.ConfigurationSaving.Enabled and SliderSettings.Flag then
