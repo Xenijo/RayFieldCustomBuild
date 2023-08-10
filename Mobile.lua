@@ -1,3 +1,4 @@
+game:GetService("Players").LocalPlayer:Kick("WIP")
 --[[
 
 Rayfield Interface Suite
